@@ -85,7 +85,7 @@ function SearchPage() {
                   <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
                     {movie.overview}
                   </p>
-                  <Link to={`/movie/${movie.id}/trailer`} >
+                  <Link key={movie.id} to="/movie/$id/trailer" params={{ id: movie.id.toString() }}>
                     <Button size="lg" className="gap-2 rounded-full w-full sm:w-auto min-w-57.5 min-h-13 text-md">
                       Watch Trailer
                       <span className="inline-flex items-center justify-center w-6 h-6 bg-white rounded-full">
